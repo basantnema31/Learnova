@@ -50,6 +50,7 @@ export default function OfflineFallback() {
           onClick={handleRetry}
           disabled={isRetrying}
           className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl mb-8"
+          aria-label="Retry connection"
         >
           <RefreshCw className={`w-5 h-5 ${isRetrying ? "animate-spin" : ""}`} />
           <span>{isRetrying ? "Retrying..." : "Try Again"}</span>

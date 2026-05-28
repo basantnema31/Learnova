@@ -304,6 +304,7 @@ const StudentDashboard = () => {
               window.location.reload()
             }
             className="w-full bg-gradient-to-r from-green-500 to-blue-500 py-3 rounded-xl font-bold text-white"
+            aria-label="Retry loading dashboard"
           >
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Retry

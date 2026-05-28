@@ -312,6 +312,7 @@ export default function Footer() {
                 <button
                   onClick={() => window.dispatchEvent(new CustomEvent("learnova:open-shortcuts"))}
                   className="group inline-flex items-center gap-2 text-left text-slate-300 transition-colors hover:text-white"
+                  aria-label="Keyboard Shortcuts"
                 >
                   <Keyboard className="h-4 w-4 text-fuchsia-200" />
                   <span>Keyboard Shortcuts</span>
