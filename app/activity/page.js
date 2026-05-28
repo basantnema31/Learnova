@@ -79,6 +79,10 @@ export default function ActivityPage() {
       getUserActivities(user.uid).then((data) => {
         setActivities(data);
         setLoading(false);
+      }).catch(err => {
+        console.error("Error fetching activities:", err);
+        toast.error("Failed to load activities");
+        setLoading(false);
       });
     } else {
       setLoading(false);

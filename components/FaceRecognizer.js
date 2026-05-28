@@ -222,6 +222,11 @@ export default function FaceRecognizer({ authUser }) {
               blinkStateRef.current.requiredBlinks =
                 Math.floor(Math.random() * 2) + 1;
               processVideo();
+            }).catch((err) => {
+              console.error("Error building face matcher:", err);
+              setMessage("Failed to build face models.");
+              setIsLoading(false);
+              setFinished(true);
             });
           };
         }

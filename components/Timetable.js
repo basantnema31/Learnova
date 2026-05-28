@@ -199,7 +199,8 @@ export default function Timetable({ role = "student" }) {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification(title, options);
-      }).catch(() => {
+      }).catch((err) => {
+        console.warn("ServiceWorker notification failed, falling back to standard notification:", err);
         new Notification(title, options);
       });
     } else {
